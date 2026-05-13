@@ -34,7 +34,7 @@
 ---
 
 ## 🚀 Kurulum ve Kullanım
-1.  Projeyi yerel makinenize indirin:
+1.  Projeyi cihazınızda indirin:
     ```bash
     git clone [https://github.com/yalcin1974/YalcinLojistik.git](https://github.com/yalcin1974/YalcinLojistik.git)
     ```
