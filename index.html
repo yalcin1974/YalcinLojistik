@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yalçın Lojistik | Profesyonel Taşımacılık</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navigasyon -->
+    <header>
+        <nav>
+            <div class="logo">YALÇIN LOJİSTİK</div
+            <ul>
+                <li><a href="#anasayfa">Ana Sayfa</a></li>
+                <li><a href="#hakkimizda">Hakkımızda</a></li>
+                <li><a href="#hizmetlerimiz">Hizmetlerimiz</a></li>
+                <li><a href="#filomuz">Araç Filomuz</a></li>
+                <li><a href="#teklif">Teklif Al</a></li>
+                <li><a href="#iletisim">İletişim</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Ana Sayfa -->
+    <section id="anasayfa">
+        <h1>Güvenilir, Hızlı ve Zamanında Taşımacılık</h1>
+        <p>Lojistik ve taşımacılık hizmetlerinde kurumsal çözümler sunuyoruz.</p>
+        <a href="#teklif" class="btn">Hemen Teklif Al</a>
+    </section>
+
+    <!-- Hakkımızda -->
+    <section id="hakkimizda" class="container">
+        <h2 class="section-title">Hakkımızda</h2>
+        <div class="about-container">
+            <div class="about-card main-card" onclick="openAboutModal('amac')">
+                <h3>Kuruluş Amacı</h3>
+                <p>Yalçın Lojistik web sitesi, lojistik ve taşımacılık hizmetlerinin dijital ortamda tanıtılmasını amaçlamaktadır.</p>
+            </div>
+            <div class="about-cards">
+                <div class="about-card" onclick="openAboutModal('misyon')">
+                    <h3>Misyon</h3>
+                    <p>Güvenilir, hızlı ve zamanında taşımacılık hizmeti sunarak müşteri güvenini artırmak.</p>
+                </div>
+                <div class="about-card" onclick="openAboutModal('vizyon')">
+                    <h3>Vizyon</h3>
+                    <p>Lojistik sektöründe dijital dönüşüme öncülük eden lider bir firma olmak.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hizmetlerimiz -->
+    <section id="hizmetlerimiz" class="container">
+        <h2 class="section-title">Hizmetlerimiz</h2>
+        <div class="services-grid">
+            <div class="service-card"><h3>Şehirlerarası Taşıma</h3><p>Türkiye'nin her noktasına güvenli ulaşım çözümleri.</p></div>
+            <div class="service-card"><h3>Uluslararası Taşıma</h3><p>Sınır ötesi lojistik ve gümrükleme desteği.</p></div>
+            <div class="service-card"><h3>Deniz Yolu Nakliye</h3><p>Limanlar arası güvenli konteyner taşımacılığı.</p></div>
+            <div class="service-card"><h3>Hava Yolu Kargo</h3><p>Acil yükler için en hızlı global çözümler.</p></div>
+        </div>
+    </section>
+
+    <!-- Araç Filomuz -->
+    <section id="filomuz" class="container">
+        <h2 class="section-title">Araç Filomuz</h2>
+        <div class="fleet-buttons">
+            <button class="fleet-btn active" onclick="showFleet('kara')">Kara Yolu</button>
+            <button class="fleet-btn" onclick="showFleet('deniz')">Deniz Yolu</button>
+            <button class="fleet-btn" onclick="showFleet('hava')">Hava Yolu</button>
+        </div>
+        <!-- Kara -->
+        <div id="kara" class="fleet-content active">
+            <div class="fleet-grid">
+                <div class="fleet-item" onclick="openModal('kara_tir')">
+                    <div class="fleet-img"><img src="img/tir.jpg" alt="Tır"></div>
+                    <h3>Tır Grubu</h3>
+                    <p>Detaylı özellikler için tıklayın.</p>
+                </div>
+                <div class="fleet-item" onclick="openModal('kara_kamyon')">
+                    <div class="fleet-img"><img src="img/kamyon.jpg" alt="Kamyon"></div>
+                    <h3>Kamyon Grubu</h3>
+                    <p>Detaylı özellikler için tıklayın.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Deniz -->
+        <div id="deniz" class="fleet-content">
+            <div class="fleet-grid">
+                <div class="fleet-item" onclick="openModal('deniz_gemi')">
+                    <div class="fleet-img">
+                        <img src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=1200&q=80" alt="Yalçın Lojistik Gemi">
+                    </div>
+                    <h3>Konteyner Gemisi</h3>
+                    <p>Detaylı özellikler için tıklayın.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Hava -->
+        <div id="hava" class="fleet-content">
+            <div class="fleet-grid">
+                <div class="fleet-item" onclick="openModal('hava_ucak')">
+                    <div class="fleet-img">
+                        <img src="https://images.unsplash.com/photo-1569154941061-e231b4725ef1?auto=format&fit=crop&w=1200&q=80" alt="Uçak">
+                    </div>
+                    <h3>Kargo Uçağı</h3>
+                    <p>Detaylı özellikler için tıklayın.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Teklif Al (Genişletilmiş Form) -->
+    <section id="teklif" class="container">
+        <h2 class="section-title">Teklif Al</h2>
+        <div class="form-container">
+            <form id="offerForm">
+                <div class="form-row">
+                    <input type="text" placeholder="Ad Soyad" required>
+                    <input type="tel" placeholder="Telefon" required>
+                </div>
+                <div class="form-row">
+                    <input type="email" placeholder="E-posta" required>
+                    <input type="text" placeholder="Yük Türü (Örn: Gıda, Tekstil...)" required>
+                </div>
+                <div class="form-row">
+                    <input type="text" placeholder="Nereden (Şehir/İlçe)" required>
+                    <input type="text" placeholder="Nereye (Şehir/İlçe)" required>
+                </div>
+                <textarea placeholder="Yükünüz hakkında eklemek istediğiniz diğer detaylar..." rows="5"></textarea>
+                <button type="submit" class="btn-submit">Teklifi Gönder</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- İletişim -->
+    <section id="iletisim" class="container">
+        <h2 class="section-title">İletişim</h2>
+        <div class="contact-wrapper">
+            <div class="contact-info">
+                <h3>Bize Ulaşın</h3>
+                <p><strong>Adres:</strong> Takbaş Mah. Kartaltepe Sok. 33400 Tarsus/Mersin</p>
+                <p><strong>Telefon:</strong> +90 551 630 0219</p>
+                <p><strong>E-posta:</strong> info@yalcinlojistik.com</p>
+                <p><strong>Çalışma Saatleri:</strong>Pzt-Cmt:08.00-20.00</p>
+            </div>
+            <div class="map" style="flex: 1.5; height: 350px; border-radius: 10px; overflow: hidden;">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3202.046960851458!2d34.88126137648349!3d36.86544496403061!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1528f3b140000001%3A0x63364f3c0b5f1a5f!2sTarsus%20%C3%9Cniversitesi!5e0!3m2!1str!2str!4v1714900000000!5m2!1str!2str" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- MODAL Kısmı -->
+    <div id="vehicleModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div id="modalBody"></div>
+        </div>
+    </div>
+    <!-- Footer alt -->
+    <footer>
+        <p>&copy; Yalçın Lojistik. Tüm Hakları Saklıdır.</p>
+    </footer>
+
+    <script>
+        function showFleet(type) {
+            document.querySelectorAll('.fleet-content').forEach(c => c.classList.remove('active'));
+            document.querySelectorAll('.fleet-btn').forEach(b => b.classList.remove('active'));
+            document.getElementById(type).classList.add('active');
+            event.currentTarget.classList.add('active');
+        }
+
+        const aboutData = {
+            'amac': { title: 'Kuruluş Amacımız', text: 'Yalçın Lojistik, modern taşımacılık ihtiyaçlarını dijital çözümlerle birleştirerek sektör standartlarını yükseltmek amacıyla kurulmuştur. Tarsus merkezli vizyonumuzla, teknolojinin gücünü kullanarak güvenli ve zamanında teslimatı esas alıyoruz.' },
+            'misyon': { title: 'Misyonumuz', text: 'Güvenilir, hızlı ve zamanında taşımacılık hizmeti sunarak müşteri güvenini en üst düzeye çıkarmayı temel sorumluluğumuz kabul ediyoruz. Yalçın Lojistik olarak, her yükü sadece bir ticari meta değil, kendi emanetimiz gibi görerek büyük bir titizlikle taşıyoruz. Operasyonel süreçlerimizde sıfır hata prensibiyle hareket ederken, iş ortaklarımıza sürdürülebilir, şeffaf ve yüksek standartlarda lojistik çözümleri sunarak sektörde değer yaratmaya devam ediyoruz.' },
+            'vizyon': { title: 'Vizyonumuz', text: 'Lojistik sektöründe dijital dönüşüme öncülük ederek, sadece bugünün değil geleceğin taşımacılık standartlarını belirleyen lider bir teknoloji lojistik firması olmaktır. İleri düzey yazılım altyapımız ve yenilikçi lojistik ağımızla, kıtaları ve insanları birbirine bağlayan, sürdürülebilir, şeffaf ve kusursuz bir operasyonel mükemmellik merkezi olmayı hedefliyoruz.' }
+        };
+
+        const vehicleData = {
+            'kara_tir': {
+                title: 'Ağır Hizmet ve Uzun Yol Tırı',
+                specs: [
+                    { label: 'Yük Kapasitesi', value: '45 tona kadar yüksek tonaj' },
+                    { label: 'Hacim', value: '110 m³ geniş iç hacim' },
+                    { label: 'Güvenlik', value: 'Şerit Takip, Kör Nokta Uyarı ve Otomatik Fren' },
+                    { label: 'Donanım', value: 'Çift katlı (Double-Deck) taşıma imkanı' },
+                    { label: 'Takip', value: 'Anlık sıcaklık ve konum izleme (7/24)' }
+                ],
+                desc: 'Yalçın Lojistik tır filosu,Şehirler arası yüklerinizi ağır tonajı sayesinde hızlı ve güvenli bir şekilde taşımaktadır.'
+            },
+            'kara_kamyon': {
+                title: 'Hızlı Dağıtım ve Şehir İçi Kamyonu',
+                specs: [
+                    { label: 'Yük Kapasitesi', value: '12 - 18 ton arası' },
+                    { label: 'Erişim', value: 'Dar sokaklara uygun manevra' },
+                    { label: 'Yükleme', value: 'Hidrolik arka kapak (Asansörlü) sistem' },
+                    { label: 'İzolasyon', value: 'Isı yalıtımlı kasa seçeneği' },
+                    { label: 'Hız', value: 'Aynı gün şehir içi teslimat garantisi' }
+                ],
+                desc: 'Şehir içi sevkiyatlarında uzmanlaşmış filomuz zaman maliyetlerinizi minimuma indirir.'
+            },
+            'deniz_gemi': {
+                title: 'Dev Konteyner Gemisi',
+                specs: [
+                    { label: 'Kapasite', value: '20.000+ konteyner (TEU)' },
+                    { label: 'Menzil', value: 'Kıtalararası kesintisiz ulaşım' },
+                    { label: 'Lojistik Modu', value: 'Dökme, Likit ve Tehlikeli Madde taşıma' },
+                    { label: 'Takip', value: 'Anlık GPS koordinat izleme' }
+                ],
+                desc: 'Deniz yolu filomuzla yükünüzün koordinatlarını anlık takip edebilirsiniz.'
+            },
+            'hava_ucak': {
+                title: 'Hava Kargo - Ekspres Taşımacılık',
+                specs: [
+                    { label: 'Teslimat', value: 'Global çapta 24-48 saat garantisi' },
+                    { label: 'Hız', value: '900 km/s' },
+                    { label: 'Güvenlik', value: 'Maksimum korumalı kargo bölümleri' },
+                    { label: 'Kargo Türü', value: 'İlaç ve teknoloji ürünlerine uygun' }
+                ],
+                desc: 'Zamanla yarışan gönderileriniz için en güvenli çözümü sunuyoruz.'
+            }
+        };
+
+        function openModal(id) {
+            const data = vehicleData[id];
+            const body = document.getElementById('modalBody');
+            let specsHtml = data.specs.map(s => `<li><b>${s.label}:</b> ${s.value}</li>`).join('');
+            body.innerHTML = `<h2 style="color:#f4b400; border-bottom:2px solid #eee; padding-bottom:10px;">${data.title}</h2><ul class="tech-specs">${specsHtml}</ul><p style="margin-top:20px; font-style:italic; color:#666; background:#f9f9f9; padding:15px; border-radius:8px;">${data.desc}</p>`;
+            document.getElementById('vehicleModal').style.display = "block";
+        }
+
+        function openAboutModal(id) {
+            const data = aboutData[id];
+            const body = document.getElementById('modalBody');
+            body.innerHTML = `<h2 style="color:#f4b400; border-bottom:2px solid #eee; padding-bottom:10px; margin-bottom:20px;">${data.title}</h2><p style="font-size: 1.1rem; line-height: 1.8; color: #555;">${data.text}</p>`;
+            document.getElementById('vehicleModal').style.display = "block";
+        }
+
+        function closeModal() { document.getElementById('vehicleModal').style.display = "none"; }
+        window.onclick = function(event) { if (event.target == document.getElementById('vehicleModal')) closeModal(); }
+
+        document.getElementById('offerForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const modalBody = document.getElementById('modalBody');
+            modalBody.innerHTML = `
+                <div style="text-align:center; padding: 20px;">
+                    <h2 style="color: #28a745; margin-bottom: 15px;">✔ Teklif Talebiniz Alındı</h2>
+                    <p style="font-size: 1.1rem; color: #555;">Sayın <b>${this.querySelectorAll('input')[0].value}</b>, talebiniz iletilmiştir.</p>
+                    <button onclick="closeModal()" class="btn-submit" style="margin-top:20px; width: auto; padding: 10px 30px;">Kapat</button>
+                </div>
+            `;
+            document.getElementById('vehicleModal').style.display = "block";
+            this.reset();
+        });
+    </script>
+</body>
+</html>
